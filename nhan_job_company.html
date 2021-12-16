@@ -1,17 +1,29 @@
-<html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  
+    <div style="width: 400px; height: 500px" id="my-chat-widget"></div>
+
     <script type='text/javascript'>
-    alert("111");
-    var oliviaChatData = oliviaChatData || [];
-    var oliviaChatBaseUrl =  'https://test.paradox.ai';
-    oliviaChatData.push(['setKey', 'gpohmbvtrzhiwowpkgek']);
-    oliviaChatData.push(['start']);
-    (function() {
-        var apply = document.createElement('script');
-        apply.type = 'text/javascript';
-        apply.async = true;
-        apply.src = 'https://ai-test-static.s3.amazonaws.com/static/site/js/widget-client.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(apply, s);
-    })();
+        alert("111");
+        var oliviaChatData = oliviaChatData || [];
+        var oliviaChatBaseUrl =  'https://test.paradox.ai';
+        oliviaChatData.push(['setKey', 'gpohmbvtrzhiwowpkgek']);
+        oliviaChatData.push(['start']);
+        (function() {
+            var apply = document.createElement('script');
+            apply.type = 'text/javascript';
+            apply.async = true;
+            apply.src = 'https://ai-test-static.s3.amazonaws.com/static/site/js/widget-client.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(apply, s);
+        })();
 </script>
+    
+  </body>
 </html>
