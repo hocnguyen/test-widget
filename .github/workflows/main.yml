@@ -1,0 +1,23 @@
+name: "Auto build"
+
+on:
+  workflow_dispatch:
+  schedule:
+    #        ┌───────────── minute (0 - 59)
+    #        │  ┌───────────── hour (0 - 23)
+    #        │  │ ┌───────────── day of the month (1 - 31)
+    #        │  │ │ ┌───────────── month (1 - 12 or JAN-DEC)
+    #        │  │ │ │ ┌───────────── day of the week (0 - 6 or SUN-SAT)
+    #        │  │ │ │ │
+    #        │  │ │ │ │
+    #        │  │ │ │ │
+    #        *  * * * *
+    - cron: '* * * * *'
+
+jobs:
+  auto_build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Test
+        run: curl -X POST -H 'Content-type: application/json' --data '{"text":"Hello, World!"}' https://hooks.slack.com/services/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
